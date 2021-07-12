@@ -37,6 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # In app files
+    'userprofile',
+    'account',
+    'post',
+    'property',
+
+    # Third party
+    'graphene_django'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +132,10 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# GraphQL settings
+
+GRAPHENE = {
+    "SCHEMA": "letting.graph.schema.schema"
+}
